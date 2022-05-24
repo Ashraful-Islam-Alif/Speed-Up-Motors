@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Motorcycle Seat",
+    "img": "https://i.ibb.co/YcBdL8z/seat.jpg",
+    "description": "Motorcycle Carbon Fiber Rear Passenger Pillion Seat Cover Cowl Fairing ",
+    "min-order": "10",
+    "available": "100",
+    "price": "$40"
+  },
+  {
+    "name": "Brake Pads",
+    "img": "https://i.ibb.co/1Ks9gWv/brake-pads.jpg",
+    "description": "Factory Directly Sell OEM Quality Motorcycle Spare Parts HJ150 Motorcycle Parts using standard box package,or also can as customers' request.",
+    "min-order": "20",
+    "available": "80",
+    "price": "$50"
+  },
+  {
+    "name": "Motorcycle Tires",
+    "img": "https://i.ibb.co/YjhqGNz/motorbike-tyres.jpg",
+    "description": "Each tire packed colorful foil film then 20/25 pcs into one bundle.20GP:3000PCS.",
+    "min-order": "25",
+    "available": "120",
+    "price": "$20"
+  }
+]
