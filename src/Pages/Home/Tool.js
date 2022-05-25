@@ -10,9 +10,9 @@ const Tool = ({ tool }) => {
     }
 
     return (
-        <div className=" col-sm-12 col-md-6 col-lg-4 g-4">
+        <div className=" col-sm-12 col-md-4 col-lg-4 g-4">
 
-            <div className="card h-100">
+            <div className="card h-100 shadow">
                 <div>
                     <img src={img} style={{ width: "350px", height: "250px" }} className="card-img-top img-fluid img-thumbnail rounded mx-auto d-block" alt="..." />
                 </div>
