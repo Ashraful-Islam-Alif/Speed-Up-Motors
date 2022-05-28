@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -11,10 +11,14 @@ const Header = () => {
     const [user] = useAuthState(auth)
     const handleSignOut = () => {
         signOut(auth);
+        localStorage.removeItem('accessToken');
+
     }
+
+
     return (
         <div>
-            <Navbar collapseOnSelect sticky='top' expand="lg" >
+            <Navbar collapseOnSelect sticky="top" expand="lg" >
                 <Container>
                     <Navbar.Brand as={Link} to="/"><img
                         src={logo}
@@ -33,22 +37,32 @@ const Header = () => {
                             <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
                             {
                                 user && <>
-                                    <Nav.Link as={Link} to="/manageItems">Manage Items</Nav.Link>
-                                    <Nav.Link as={Link} to="/addItems">Add Item</Nav.Link>
-                                    <Nav.Link as={Link} to="/myItems">My Items</Nav.Link>
+                                    <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
+
+
                                 </>
 
                             }
+
                             {user ?
-                                <button className='btn btn-link text-black text-decoration-none' onClick={handleSignOut}>Sign Out</button>
+
+                                <button className="btn btn-ghost" onClick={handleSignOut} >Sign Out</button>
                                 :
                                 <Nav.Link as={Link} to="/login">
                                     Login
-                                </Nav.Link>}
+                                </Nav.Link>
+                            }
                         </Nav>
+
+
                     </Navbar.Collapse>
+
                 </Container>
+
             </Navbar>
+
+
+
         </div>
     );
 };

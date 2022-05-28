@@ -10,7 +10,7 @@ const BusinessSummary = () => {
             <h1 className='text-primary fw-bold fst-italic text-center m-5 '>Overall Views of us</h1>
             <div class="row row-cols-1 row-cols-md-3 g-4 mb-4 rounded-3 ">
                 <div class="col d-flex justify-content-center align-items-center">
-                    <div class="card h-100 border-0">
+                    <div class="card h-100 border-0 shadow p-4">
                         <ul><li><RiUserFollowFill size={100} /></li></ul>
                         <div class="card-body text-center">
                             <h5 class="card-title">Followers</h5>
@@ -19,7 +19,7 @@ const BusinessSummary = () => {
                     </div>
                 </div>
                 <div class="col d-flex justify-content-center align-items-center">
-                    <div class="card h-100 border-0">
+                    <div class="card h-100 border-0 shadow p-4">
                         <ul><li><FcFeedback size={100} /></li></ul>
                         <div class="card-body text-center">
                             <h5 class="card-title">FeedBack</h5>
@@ -28,7 +28,7 @@ const BusinessSummary = () => {
                     </div>
                 </div>
                 <div class="col d-flex justify-content-center align-items-center">
-                    <div class="card h-100 border-0">
+                    <div class="card h-100 border-0 shadow p-4">
                         <ul><li><BsTools size={100} /></li></ul>
                         <div class="card-body text-center">
                             <h5 class="card-title">Tools</h5>

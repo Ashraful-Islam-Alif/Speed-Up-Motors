@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from './Banner';
+import Brands from './Brands';
 import BusinessSummary from './BusinessSummary';
 import FlashSale from './FlashSale';
 import Purchase from './Purchase';
@@ -13,7 +14,9 @@ const Home = () => {
             <Tools></Tools>
             <Reviews />
             <BusinessSummary></BusinessSummary>
+            <Brands></Brands>
             <FlashSale></FlashSale>
+
         </div>
     );
 };

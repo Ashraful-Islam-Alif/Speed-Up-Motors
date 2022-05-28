@@ -77,13 +77,13 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
-                <Button type="submit" className='w-50 mx-auto d-block btn btn-warning'>
+                <Button type="submit" className='bg-sky-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded butn w-50 d-block mx-auto m-3 d-flex align-items-center justify-center'>
                     Login
                 </Button>
             </Form>
             {errorElement}
             <p>Forget Password? <button className='btn btn-link text-info text-decoration-none' onClick={resetPassword}>Reset</button></p>
-            <p>New to Electronics Bazaar? <Link to='/register' className='text-info text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
+            <p>New to SPEEDUP MOTORS? <Link to='/register' className='text-info text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
             <SocialLogin></SocialLogin>
 
         </div>

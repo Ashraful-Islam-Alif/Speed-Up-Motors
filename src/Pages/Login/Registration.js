@@ -38,8 +38,8 @@ const Register = () => {
 
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
-        console.log('Updated profile');
-        navigate('/home')
+
+        navigate(from, { replace: true });
     }
 
     return (
@@ -62,9 +62,9 @@ const Register = () => {
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
                 <input onClick={() => setAgree(!agree)} type="checkbox" name="terms" id="terms" />
-                <label htmlFor="terms" className={agree ? "text-info ps-2" : "ps-2 text-danger mb-3"}>Accept Electronics Bazzar Terms and Conditions</label>
+                <label htmlFor="terms" className={agree ? "text-info ps-2" : "ps-2 text-danger mb-3"}>Accept SPEEDUP MOTORS Terms and Conditions</label>
                 <br />
-                <Button disabled={!agree} variant="warning" type="submit" className='w-50 mx-auto d-block mb-3'>
+                <Button disabled={!agree} type="submit" className='bg-sky-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded butn w-50 d-block mx-auto m-3 d-flex align-items-center justify-center'>
                     Register
                 </Button>
             </Form>
