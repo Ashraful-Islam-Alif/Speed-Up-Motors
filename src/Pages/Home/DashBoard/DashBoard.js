@@ -32,6 +32,7 @@ const DashBoard = () => {
                         <li><Link to="/dashboard" className='text-decoration-none text-center'>My Order</Link></li>
                         <li><Link to="/dashboard/review" className='text-decoration-none'>My Reviews</Link></li>
                         <li><Link to="/dashboard/myProfile" className='text-decoration-none'> My Profile</Link></li>
+                        <li><Link to="/dashboard/users" className='text-decoration-none'> All Users</Link></li>
                     </ul>
                 </Offcanvas.Body>
             </Offcanvas>
