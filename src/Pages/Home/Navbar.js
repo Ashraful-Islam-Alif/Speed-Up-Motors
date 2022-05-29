@@ -18,7 +18,7 @@ const Header = () => {
 
     return (
         <div>
-            <Navbar collapseOnSelect sticky="top" expand="lg" >
+            <Navbar collapseOnSelect sticky="top" expand="lg" className='d-flex items-center '>
                 <Container>
                     <Navbar.Brand as={Link} to="/"><img
                         src={logo}
@@ -38,6 +38,7 @@ const Header = () => {
                             {
                                 user && <>
                                     <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
+                                    <button>{user.displayName}</button>
 
 
                                 </>

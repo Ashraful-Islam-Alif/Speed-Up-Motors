@@ -67,7 +67,7 @@ const Purchase = () => {
                 console.log(result);
             })
         console.log(data);
-        toast("Successfully Purchased")
+        toast('Order added successfully')
     }
     return (
         <div className='container mx-auto'>
@@ -83,13 +83,14 @@ const Purchase = () => {
                     <p className="card-text"><span className='font-bold'>Price: </span> {price} <span className='badge bg-dark text-wrap'>/ unit</span></p>
                 </div>
             </div>
-            <h2 className='text-primary text-center m-4 fw-bold'>Provide Information</h2>
-            <form className='d-flex flex-column border p-4 mt-4' onSubmit={handleSubmit(onSubmit)}>
 
-                {user?.displayName && <input type="text" name="name" className='mb-2 p-2' readOnly value={user?.displayName || ''} {...register("displayName")} />}
-                {user?.email && <input type="text" name="email" className='mb-2 p-2' readOnly value={user?.email || ''} {...register("email")} />}
+            <form className='d-flex flex-column border p-4 mt-4' onSubmit={handleSubmit(onSubmit)}>
+                <h2 className='text-primary text-center m-4 fw-bold'>Provide Information</h2>
+                <input type="text" name="name" className='mb-2 p-2' readOnly value={user?.displayName || ''} {...register("displayName")} />
+                <input type="text" name="email" className='mb-2 p-2' readOnly value={user?.email || ''} {...register("email")} />
                 <input placeholder='Address' className='mb-2 p-2' {...register("address")} />
                 <input placeholder='Mobile Number' className='mb-2 p-2' {...register("number")} />
+                <input placeholder='Calculate Total Price' className='mb-2 p-2'  {...register("price")} />
                 <div className="col mb-2">
                     <div class="input-group">
                         <div class="input-group-prepend">
