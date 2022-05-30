@@ -24,7 +24,7 @@ const Payment = () => {
     }
 
     return (
-        <div>
+        <div className='container'>
             <div class="card w-50 max-w-md bg-orange-300 shadow-xl my-12">
                 <div class="card-body">
                     <p className="text-orange-400 font-bold">Hello, {order?.displayName}</p>

@@ -33,8 +33,8 @@ const MyOrders = () => {
         }
     }, [user])
     return (
-        <div>
-            <h2>My Orders: {orders.length}</h2>
+        <div className='container'>
+            <h2 className='text-center fw-bold text-blue-700 mb-4 '>Your Total Orders: {orders.length}</h2>
             <div class="overflow-x-auto">
                 <table class="table w-full">
                     <thead>
