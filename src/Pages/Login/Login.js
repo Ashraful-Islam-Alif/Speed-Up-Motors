@@ -27,7 +27,7 @@ const Login = () => {
     let location = useLocation();
     let errorElement;
     const [item, setItem] = useState()
-    const [token] = useToken()
+    const [token] = useToken(user)
     const handleSubmit = async event => {
         event.preventDefault();
         const email = emailRef.current.value;

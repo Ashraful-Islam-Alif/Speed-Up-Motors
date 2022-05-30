@@ -15,7 +15,7 @@ const Purchase = () => {
     const [tool, setTool] = useState({})
     const { _id, name, img, description, available, price, minOrder } = tool;
     useEffect(() => {
-        const url = `https://evening-headland-64226.herokuapp.com/tool/${id}`
+        const url = `http://localhost:5000/tool/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setTool(data))
@@ -53,7 +53,7 @@ const Purchase = () => {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
-        const url = 'https://evening-headland-64226.herokuapp.com/myOrder';
+        const url = 'http://localhost:5000/myOrder';
         fetch(url, {
             method: 'POST',
             headers: {
