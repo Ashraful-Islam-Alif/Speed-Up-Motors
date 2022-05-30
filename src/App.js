@@ -16,6 +16,10 @@ import MyProfile from './Pages/Home/DashBoard/MyProfile';
 import Users from './Pages/Home/DashBoard/Users';
 import Payment from './Pages/Home/DashBoard/Payment';
 import RequireAdmin from './Pages/Login/RequireAdmin';
+import AllOrders from './Pages/Home/DashBoard/AllOrders';
+import AddProducts from './Pages/Home/DashBoard/AddProducts';
+import MakeAdmin from './Pages/Home/DashBoard/MakeAdmin';
+import ManageProducts from './Pages/Home/DashBoard/ManageProducts';
 
 function App() {
   return (
@@ -31,6 +35,10 @@ function App() {
         <Route path='dashboard' element={<RequireAuth><DashBoard></DashBoard></RequireAuth>}>
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path='review' element={<AddReview></AddReview>}></Route>
+          <Route path='allOrders' element={<AllOrders></AllOrders>}></Route>
+          <Route path='addProduct' element={<AddProducts></AddProducts>}></Route>
+          <Route path='makeAdmin' element={<MakeAdmin></MakeAdmin>}></Route>
+          <Route path='manageProducts' element={<ManageProducts></ManageProducts>}></Route>
           <Route path='myProfile' element={<MyProfile></MyProfile>}></Route>
           <Route path='users' element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>
           <Route path='payment/:id' element={<Payment></Payment>}></Route>
