@@ -13,8 +13,8 @@ import DashBoard from './Pages/Home/DashBoard/DashBoard';
 import MyOrders from './Pages/Home/DashBoard/MyOrders';
 import AddReview from './Pages/Home/DashBoard/AddReview';
 import MyProfile from './Pages/Home/DashBoard/MyProfile';
-import Payment from './Pages/Home/Payment';
 import Users from './Pages/Home/DashBoard/Users';
+import Payment from './Pages/Home/DashBoard/Payment';
 
 function App() {
   return (
@@ -22,16 +22,17 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/home' element={<Home></Home>}></Route>
-        <Route path='/login' element={<Login></Login>}></Route>
-        <Route path='/register' element={<Register></Register>}></Route>
-        <Route path='/payment/:id' element={<Payment></Payment>}></Route>
-        <Route path='/tool/:id' element={<RequireAuth><Purchase></Purchase></RequireAuth>}></Route>
+        <Route path='home' element={<Home></Home>}></Route>
+        <Route path='login' element={<Login></Login>}></Route>
+        <Route path='register' element={<Register></Register>}></Route>
+
+        <Route path='tool/:id' element={<RequireAuth><Purchase></Purchase></RequireAuth>}></Route>
         <Route path='dashboard' element={<RequireAuth><DashBoard></DashBoard></RequireAuth>}>
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path='review' element={<AddReview></AddReview>}></Route>
           <Route path='myProfile' element={<MyProfile></MyProfile>}></Route>
           <Route path='users' element={<Users></Users>}></Route>
+          <Route path='payment/:id' element={<Payment></Payment>}></Route>
         </Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>

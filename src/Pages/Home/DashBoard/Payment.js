@@ -1,0 +1,36 @@
+import React from 'react';
+import { useQuery } from 'react-query';
+import { useParams } from 'react-router-dom';
+import Loading from '../Loading';
+
+const Payment = () => {
+
+    const { id } = useParams();
+    const url = `http://localhost:5000/myOrder/${id}`;
+
+    const { data: order, isLoading } = useQuery(['order', id], () => fetch(url, {
+        method: 'GET',
+        headers: {
+            'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+        }
+    }).then(res => res.json()));
+
+    if (isLoading) {
+        return <Loading></Loading>
+    }
+
+    return (
+        <div>
+            <div class="card w-50 max-w-md bg-orange-300 shadow-xl my-12">
+                <div class="card-body">
+                    <p className="text-orange-400 font-bold">Hello, {order?.displayName}</p>
+                    <h2 class="card-title">Your Order Quantity is: {order?.quantity}</h2>
+                    <p>Please pay: ${order?.price}</p>
+                </div>
+            </div>
+
+        </div>
+    );
+};
+
+export default Payment;
