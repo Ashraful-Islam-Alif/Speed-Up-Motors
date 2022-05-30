@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 const AddReview = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
-        const url = 'http://localhost:5000/addOrder';
+        const url = 'https://evening-headland-64226.herokuapp.com/addOrder';
         fetch(url, {
             method: 'POST',
             headers: {
@@ -27,9 +27,9 @@ const AddReview = () => {
                 {/* <input type="text" name="email" className='mb-2' {...register("name", { required: true, maxLength: 20 })} /> */}
                 <input placeholder='Email Address' className='mb-2' {...register("email")} />
                 <input placeholder='Product Name' className='mb-2' {...register("name", { required: true, maxLength: 20 })} />
-                <input placeholder='Supplier Name' className='mb-2' {...register("supplier", { required: true, maxLength: 20 })} />
-                <textarea placeholder='Description' className='mb-2' {...register("details")} />
-                <input className='btn btn-success' type="submit" value="Add New Product" />
+
+                <textarea placeholder='Tell about us' className='mb-2' {...register("details")} />
+                <input className='btn btn-success' type="submit" value="Add Review" />
             </form>
         </div>
     );

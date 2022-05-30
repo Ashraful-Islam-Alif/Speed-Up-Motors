@@ -12,7 +12,7 @@ const CheckoutForm = ({ order }) => {
 
     const { _id, price, displayName, email } = order;
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://evening-headland-64226.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -82,7 +82,7 @@ const CheckoutForm = ({ order }) => {
             }
 
             //update from database
-            fetch(`http://localhost:5000/myOrder/${_id}`, {
+            fetch(`https://evening-headland-64226.herokuapp.com/myOrder/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
