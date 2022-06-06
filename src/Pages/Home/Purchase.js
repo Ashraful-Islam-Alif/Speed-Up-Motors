@@ -53,7 +53,7 @@ const Purchase = () => {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
-        const url = 'http://localhost:5000/myOrder';
+        const url = 'https://evening-headland-64226.herokuapp.com/myOrder';
         fetch(url, {
             method: 'POST',
             headers: {
